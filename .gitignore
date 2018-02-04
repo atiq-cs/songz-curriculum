@@ -1,3 +1,11 @@
 # node.js
 #
 node_modules/
+# Visual Studio
+curriculum/cs1/.vs/
+curriculum/cs1/packages/
+curriculum/cs1/solutions/bin/
+curriculum/cs1/solutions/obj/
+curriculum/cs1/tests/Properties/
+curriculum/cs1/tests/bin/
+curriculum/cs1/tests/obj/
