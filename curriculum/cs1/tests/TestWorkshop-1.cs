@@ -40,5 +40,23 @@ namespace tests {
         Assert.AreEqual(expected, actual, "func getDivisorsSum failed for " + input);
       }
     }
+
+    [TestMethod]
+    public void TestPrimality() {
+      List<int> inputValues = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+        12, 13, 14, 17, 18, 21, 28, 97, 100 };
+      List<bool> expectedValues = new List<bool> { false, true, true, false,
+        true, false, true, false, false, false, true, false, true, false, true,
+        false, false, false, true, false };
+
+      Workshop1 workshop = new Workshop1();
+
+      for (int i = 0; i < inputValues.Count; i++) {
+        int input = inputValues[i];
+        bool expected = expectedValues[i];
+        bool actual = workshop.IsPrime(input);
+        Assert.AreEqual(expected, actual, "func isPrime failed for " + input);
+      }
+    }
   }
 }
