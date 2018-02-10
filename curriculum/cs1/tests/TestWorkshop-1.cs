@@ -75,5 +75,20 @@ namespace tests {
         Assert.AreEqual(expected, actual, "func gcd failed for " + input1 + ", " + input2);
       }
     }
+
+    [TestMethod]
+    public void TestGetNextMultipleOfSeven() {
+      List<int> inputValues = new List<int> { 1, 14, 21, 28 };
+      List<int> expectedValues = new List<int> { 7, 21, 28, 35 };
+
+      Workshop1 workshop = new Workshop1();
+
+      for (int i = 0; i < inputValues.Count; i++) {
+        int input = inputValues[i];
+        int expected = expectedValues[i];
+        int actual = workshop.GetNextMultipleOfSeven(input);
+        Assert.AreEqual(expected, actual, "func find7m failed for " + input);
+      }
+    }
   }
 }

@@ -51,5 +51,13 @@ namespace solutions {
     public int GCD(int a, int b) {
       return b == 0 ? a : GCD(b, a % b);
     }
+
+    /*
+     * 8.1. (find7m)
+     * takes in a number, returns the next number that is divisible by 7
+     */
+    public int GetNextMultipleOfSeven(int n) {
+      return n + 7 - n % 7;
+    }
   }
 }
