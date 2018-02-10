@@ -23,5 +23,22 @@ namespace tests {
         Assert.AreEqual(expected, actual, "func Add failed for " + input1 + ", " + input2);
       }
     }
+    
+    [TestMethod]
+    public void TestDivisorSum() {
+      List<int> inputValues = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+        12, 13, 14, 17, 18, 21, 28, 97, 100 };
+      List<int> expectedValues = new List<int> { 0, 0, 0, 2, 0, 5, 0, 6, 3, 7, 0,
+        15, 0, 9, 0, 20, 10, 27, 0, 116 };
+
+      Workshop1 workshop = new Workshop1();
+
+      for (int i = 0; i < inputValues.Count; i++) {
+        int input = inputValues[i];
+        int expected = expectedValues[i];
+        int actual = workshop.GetDivisorsSum(input);
+        Assert.AreEqual(expected, actual, "func getDivisorsSum failed for " + input);
+      }
+    }
   }
 }
