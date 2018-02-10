@@ -43,5 +43,13 @@ namespace solutions {
           return false;
       return true;
     }
+
+    /*
+     * 7.1 (gcd)
+     * given two numbers find their greatest common divisor
+     */
+    public int GCD(int a, int b) {
+      return b == 0 ? a : GCD(b, a % b);
+    }
   }
 }

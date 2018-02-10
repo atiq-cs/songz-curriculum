@@ -58,5 +58,22 @@ namespace tests {
         Assert.AreEqual(expected, actual, "func isPrime failed for " + input);
       }
     }
+
+    [TestMethod]
+    public void TestGCD() {
+      List<int> inputValuesArg1 = new List<int> { 30, 30, 10, 15 };
+      List<int> inputValuesArg2 = new List<int> { 45, 43, 10, 5 };
+      List<int> expectedValues  = new List<int> { 15, 1, 10, 5 };
+
+      Workshop1 workshop = new Workshop1();
+
+      for (int i = 0; i < inputValuesArg1.Count; i++) {
+        int input1 = inputValuesArg1[i];
+        int input2 = inputValuesArg2[i];
+        int expected = expectedValues[i];
+        int actual = workshop.GCD(input1, input2);
+        Assert.AreEqual(expected, actual, "func gcd failed for " + input1 + ", " + input2);
+      }
+    }
   }
 }
