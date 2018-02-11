@@ -48,7 +48,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestWorkshop01.cs" />
+    <Compile Include="DeterministicTimer.cs" />
+    <Compile Include="TestQ10.cs" />
+    <Compile Include="TestWorkshop-1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
