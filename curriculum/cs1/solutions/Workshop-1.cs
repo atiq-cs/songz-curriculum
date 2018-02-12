@@ -11,6 +11,18 @@ namespace solutions {
     }
 
     /*
+     * 4.1. (printStr)
+     * (printStr) - takes in a number n and string, return the string repeated
+     * n number of times i.e., printStr(2, ‘abc’) -> ‘abcabc’
+     * recursive implementation
+     */
+    public string PrintStr(int n, string str, string result = "") {
+      if (n == 0)
+        return result;
+      return PrintStr(n - 1, str, result + str);
+    }
+
+    /*
      * 6.1 a (getDivisorsSum) - Get sum of divisors
      * takes in a number, returns sum of all the divisors (except 1 or itself)
      *  i.e., getDivisors(6) -> 5 because 2+3

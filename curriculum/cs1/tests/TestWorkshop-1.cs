@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using solutions;
 
@@ -23,7 +22,25 @@ namespace tests {
         Assert.AreEqual(expected, actual, "func Add failed for " + input1 + ", " + input2);
       }
     }
-    
+
+    [TestMethod]
+    public void TestPrintStr() {
+      // Test against a list of pairs of number and string
+      List<int> inputValuesArg1 = new List<int> { 0, 1, 2, 3, 5 };
+      List<string> inputValuesArg2 = new List<string> { "joe", "tom", "abc", "joe", "hi" };
+      List<string> expectedValues = new List<string> { "", "tom", "abcabc", "joejoejoe", "hihihihihi" };
+
+      Workshop1 workshop = new Workshop1();
+
+      for (int i = 0; i < inputValuesArg1.Count; i++) {
+        int n = inputValuesArg1[i];
+        string str = inputValuesArg2[i];
+        string expected = expectedValues[i];
+        string actual = workshop.PrintStr(n, str);
+        Assert.AreEqual(expected, actual, "func PrintStr failed for " + n + ", " + str);
+      }
+    }
+
     [TestMethod]
     public void TestDivisorSum() {
       List<int> inputValues = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
