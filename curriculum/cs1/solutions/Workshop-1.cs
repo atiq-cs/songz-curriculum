@@ -11,6 +11,15 @@ namespace solutions {
     }
 
     /*
+     * 2.a. (max4)
+     * Write a function that takes in 4 numbers and returns the biggest one.
+     * Total number of comparisons: 3
+     */
+    public int MaxOfFour(int a, int b, int c, int d) {
+      return Math.Max(Math.Max(a, b), Math.Max(c, d));
+    }
+
+    /*
      * 4.1. (printStr)
      * (printStr) - takes in a number n and string, return the string repeated
      * n number of times i.e., printStr(2, ‘abc’) -> ‘abcabc’
