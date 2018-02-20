@@ -24,6 +24,27 @@ namespace tests {
     }
 
     [TestMethod]
+    public void TestMaxOfFour() {
+      List<int[]> inputValuesArgs = new List<int[]> { new int [] { 1, 2, 3, 5
+        }, new int[] { 11, -2, 13, 9 }, new int[] { 100, -90, 99, 6 } };
+      List<int> expectedValues  = new List<int> { 5, 13, 100 };
+      Workshop1 workshop = new Workshop1();
+
+      for (int i = 0; i < inputValuesArgs.Count; i++) {
+        int[] inputArgs = inputValuesArgs[i];
+        int expected = expectedValues[i];
+        if (inputArgs.Length != 4)
+          throw new System.ArgumentException("Number of arguments in input is" +
+            "not valid!");
+        int actual = workshop.MaxOfFour(inputArgs[0], inputArgs[1],
+          inputArgs[2], inputArgs[3]);
+        Assert.AreEqual(expected, actual, "func max4 failed for " +
+          inputArgs[0] + ", " + inputArgs[1] + ", " + inputArgs[2] + ", " +
+          inputArgs[3]);
+      }
+    }
+
+    [TestMethod]
     public void TestPrintStr() {
       // Test against a list of pairs of number and string
       List<int> inputValuesArg1 = new List<int> { 0, 1, 2, 3, 5 };
